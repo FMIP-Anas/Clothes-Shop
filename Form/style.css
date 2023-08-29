@@ -1,0 +1,111 @@
+.active{
+    border-radius: 10px;
+    border: 2px rgb(255, 174, 0) solid;
+    padding: 0 5px;
+}
+nav form::before{
+    font-family: var(--fa-style-family-classic);
+    content: "\f002";
+    font-weight: 900;
+}
+
+nav input{
+    width: 270px;
+    height: 30px;
+    padding: 10px;
+}
+nav ul li{
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav ul li a{
+    padding-bottom: 2px;
+}
+
+nav ul li:hover a{
+    color: rgb(255, 174, 0) !important;
+    border-bottom: 2px rgb(255, 174, 0) solid;
+}
+nav ul li:hover a.active{
+    border-width: 0;
+}
+@media (min-width:767px) and (max-width:992px) {
+    nav .container{
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+
+.display-flex{
+    display: flex !important;
+}
+
+@media (max-width:767px){
+    nav input{
+        width: 170px;
+    }
+    nav .container ul{
+        z-index: 1000;
+        flex-direction: column;
+        position: absolute;
+        top:70px;
+        right: 0;
+        width: 150px;
+        background-color: black;
+        gap: 0;
+    }
+    nav .container ul li{
+        border-bottom: 1px white solid;
+        padding: 5px 0;
+        width: 100%;
+    }
+    nav .container ul li:last-child{
+        border-bottom: none;
+    }
+}
+@media (max-width:400px){
+    nav input{
+        width: 130px;
+    }
+}
+
+body > .done{
+    width: 300px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    border: 3px rgb(255, 174, 0) solid;
+    display: none;
+}
+
+body > .done h3,
+body > .done h5
+{
+    border-bottom: 3px rgb(255, 174, 0) solid;
+}
+
+body > .done button{
+    margin: 10px auto;
+    background-color: rgb(255, 174, 0);
+    border: none;
+    border-radius: 10px;
+}
+
+body > form{
+    width: 300px;
+    margin: 10px auto;
+}
+body > form .input{
+    border: 2px black solid;
+}
+body > form p{
+    display: none;
+}
+footer ul li:nth-child(2){
+    border-top: 1px grey solid;
+    border-bottom: 1px grey solid;
+}

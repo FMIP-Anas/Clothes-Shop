@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="myFramework.css">
+    <link rel="stylesheet" href="../webfonts/all.min.css">
+    <title>Submit And Buy</title>
+</head>
+<body>
+    <nav class="d-flex align-center p-20 bg-black c-white">
+        <h1 class="logo">My Store</h1>
+        <div class="container d-flex align-center justify-space-between">
+            <h2 class="c-orange h1">Last Step Master Client</h2>
+            <div class="links">
+                <i class="fas fa-bars toggle-menu visible-xs"></i>
+                <ul class="non-styled-list d-grid grid-col-5-fr text-center gap-30 align-center"> 
+                    <li class="position-relative"><a class="normal-link c-white" href="../Home/index.html">HOME</a></li>
+                    <li class="position-relative"><a class="normal-link c-white" href="../Shop/Shop.html">SHOP</a></li>
+                    <li class="position-relative"><a class="normal-link c-white" href="../Contact Us/contactUs.html">CONTACT US</a></li>
+                    <li class="position-relative"><a class="normal-link c-white" href="../About Us/aboutUs.html">ABOUT US</a></li>
+                </ul>    
+            </div>
+        </div>
+    </nav>
+    <div class="done bg-black c-orange d-flex direction-column">
+        <h3 class="p-10">Finally,The Deal Is Done!!</h2>
+        <p id="moneyBefore" class="fs-13 p-5"></p>
+        <p id="moneyAfter" class="fs-13 p-5"></p>
+        <h4 class="p-5">You Will Have Your Clothes in 24 Hours</h3>
+        <h5 class="p-5">Thank You For Dealing With Us It Is Our Pride!!</h4>
+        <button class="c-black pointer p-10">Done</button>
+    </div>
+    <form class="d-flex direction-column gap-10">
+        <div class="d-flex direction-column gap-5">
+            <label  for="#User Name">User Name</label>
+            <input required class="normal-input rad-15 p-10 input" type="text" id="User Name" placeholder="User Name">
+            <p class="c-red fs-13 c-green">Name Is True</p>
+            <p class="c-red fs-13 c-red">Data Doesn't Match</p>
+            <p class="c-red fs-13 c-red">Name Is Not Existed</p>
+        </div>
+        <div class="d-flex direction-column gap-5">
+            <label  for="#Phone">Telephone</label>
+            <input required class="normal-input rad-15 p-10 input" type="text" id="Phone" placeholder="Phone">
+            <p class="c-red fs-13 c-green">Phone Is True</p>
+            <p class="c-red fs-13 c-red">Data Doesn't Match</p>
+            <p class="c-red fs-13 c-red">Phone Is Not Existed</p>
+        </div>
+        <div class="d-flex direction-column gap-5">
+            <label  for="#Address">Address</label>
+            <input required class="normal-input rad-15 p-10 input" type="text" id="Address" placeholder="Address">
+            <p class="c-red fs-13 c-green">Address Is True</p>
+            <p class="c-red fs-13 c-red">Data Doesn't Match</p>
+            <p class="c-red fs-13 c-red">Address Is Not Existed</p>
+        </div>
+        <div class="d-flex direction-column gap-5">
+            <label  for="#Company Of Card">Company Of Card</label>
+            <select class="rad-15 p-10 input pointer" name="" id="Company Of Card">
+                <option value="VISA" class="pointer">VISA</option>
+                <option value="MasterCard" class="pointer">MasterCard</option>
+                <option value="American Express" class="pointer">American Express</option>
+            </select>
+            <p class="c-red fs-13 c-green">Company Of Card Is True</p>
+            <p class="c-red fs-13 c-red">Data Doesn't Match</p>
+        </div>
+        <div class="d-flex direction-column gap-5">
+            <label  for="#Account Number">Account Number</label>
+            <input required class="normal-input rad-15 p-10 input" type="text" minlength="19" maxlength="19" id="Account Number" placeholder="Acc. Number">
+            <p class="c-red fs-13 c-green">Account Number Is True</p>
+            <p class="c-red fs-13 c-red">Data Doesn't Match</p>
+            <p class="c-red fs-13 c-red">Account Number Is Not Existed</p>
+        </div>
+        <div class="d-flex direction-column gap-5">
+            <label  for="#Expire Date">Expire Data</label>
+            <input required class="normal-input rad-15 p-10 input" type="text" id="Expire Date" placeholder="Exp. Date">
+            <p class="c-red fs-13 c-green">Expire Date Is True</p>
+            <p class="c-red fs-13 c-red">Data Doesn't Match</p>
+        </div>
+        <div class="d-flex direction-column gap-5">
+            <label  for="#Security Code">Security Code</label>
+            <input required class="normal-input rad-15 p-10 input" type="number" maxlength="3" id="Security Code" placeholder="Security Code">
+            <p class="c-red fs-13 c-green">Security Code Is True</p>
+            <p class="c-red fs-13 c-red">Data Doesn't Match</p>
+            <p class="c-red fs-13 c-red">Security Code Is Not Existed</p>
+        </div>
+        <div class="d-flex direction-column gap-5">
+            <label  for="#Password">Password</label>
+            <input required class="normal-input rad-15 p-10 input" type="password" id="Password" placeholder="Password">
+            <p class="c-red fs-13 c-green">Password Is True</p>
+            <p class="c-red fs-13 c-red">Data Doesn't Match</p>
+            <p class="c-red fs-13 c-red">Password Is Not Existed</p>
+        </div>
+        <input required id="submit" class="normal-input rad-15 p-10 bg-black c-orange w-100 m-auto pointer" type="submit" value="Submit">
+    </form>
+    <footer class="bg-black c-white p-20">
+        <p class="text-center">&copy;2023 <a href="" class="normal-link c-orange">-FMIP-</a> All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

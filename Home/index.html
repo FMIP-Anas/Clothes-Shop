@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../My Framework/myFramework.css">
+    <link rel="stylesheet" href="../webfonts/all.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav class="d-flex align-center p-20 bg-black c-white">
+        <h1 class="logo">My Store</h1>
+        <div class="container d-flex align-center justify-space-between">
+            <h2 class="c-orange">We are buying you Luxury</h2>
+
+            <div class="links">
+                <i class="fas fa-bars toggle-menu visible-xs"></i>
+                <ul class="non-styled-list d-grid grid-col-5-fr text-center gap-30 align-center"> 
+                    <li class="position-relative"><a class="normal-link c-white active" href="">HOME</a></li>
+                    <li class="position-relative"><a class="normal-link c-white" href="../Shop/Shop.html">SHOP</a></li>
+                    <li class="position-relative"><a class="normal-link c-white" href="../Contact Us/contactUs.html">CONTACT US</a></li>
+                    <li class="position-relative"><a class="normal-link c-white" href="../About Us/aboutUs.html">ABOUT US</a></li>
+                </ul>    
+            </div>
+        </div>
+    </nav>
+    <div class="carousel container">
+        <div class="img-slider d-flex">
+            <img src="../images/carousel-1.jpg" class="res-image container">
+            <img src="../images/carousel-2.jpg" class="res-image container">
+            <img src="../images/carousel-3.jpg" class="res-image container">
+            <img src="../images/carousel-4.jpg" class="res-image container">
+            <img src="../images/carousel-5.jpg" class="res-image container">
+        </div>
+    </div>
+    <div class="categories p-20 d-grid grid-col-2-fr gap-10">
+        <div id="shirtsLink" onclick="goToProducts('shirts')" class="category d-flex direction-column gap-5 pb-10 text-center">
+            <img src="../images/Shirts.jpg" alt="" class="w-full flex-1">
+            <h2 class="h1">T-shirts</h2>
+            <p class="d-flex align-center justify-center gap-5 fs-15">See more <i class="fa-solid fa-arrow-right"></i></p>
+        </div>
+        <div id="pantsLink" onclick="goToProducts('pants')" class="category d-flex direction-column gap-5 pb-10 text-center">
+            <img src="../images/pants.jpg" alt="" class="w-full flex-1">
+            <h2 class="h1">Pants</h2>
+            <p class="d-flex align-center justify-center gap-5 fs-15">See more <i class="fa-solid fa-arrow-right"></i></p>
+        </div>
+        <div id="shoesLink" onclick="goToProducts('shoes')" class="category d-flex direction-column gap-5 pb-10 text-center">
+            <img src="../images/Shoes.jpg" alt="" class="w-full flex-1">
+            <h2 class="h1">Shoes</h2>
+            <p class="d-flex align-center justify-center gap-5 fs-15">See more <i class="fa-solid fa-arrow-right"></i></p>
+        </div>
+        <div id="jacketsLink" onclick="goToProducts('jackets')" class="category d-flex direction-column gap-5 pb-10 text-center">
+            <img src="../images/jackets.jpg" alt="" class="w-full flex-1">
+            <h2 class="h1">Jackets</h2>
+            <p class="d-flex align-center justify-center gap-5 fs-15">See more <i class="fa-solid fa-arrow-right"></i></p>
+        </div>
+    </div>
+    <footer class="bg-black c-white p-20">
+        <p class="text-center">&copy;2023 <a href="" class="normal-link c-orange">-FMIP-</a> All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

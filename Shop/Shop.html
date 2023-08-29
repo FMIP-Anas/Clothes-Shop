@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../My Framework/myFramework.css">
+    <link rel="stylesheet" href="../webfonts/all.min.css">
+    <title>Shop</title>
+</head>
+<body>
+    <div class="buyDiv c-orange h-fit">
+        <i class="fa-sharp fa-solid fa-circle-xmark bg-black pointer circle c-red position-fixed" onclick="rmvBuyDiv()"></i>
+        <h2 class="p-20 text-center">The details of the deal</h2>   
+        <div class="content d-flex justify-space-between">
+            <div class="products d-flex gap-10 flex-wrap"></div>
+            <div class="info p-10 d-flex gap-20 direction-column justify-end">
+                <div class="details d-flex gap-20">
+                    <h1 class="logo fs-40">My Store</h1>
+                    <i id="cart" class="fa-solid fa-cart-shopping c-orange position-relative"><p></p></i>
+                </div>
+                <div class="btn d-flex align-center justify-center fs-40 rad-15 bg-orange c-black text-center pointer gap-10" onclick="goToForm()">Submit <i class="fa-solid fa-credit-card"></i></div>
+            </div>
+        </div>
+        <div class="buyAnother d-grid grid-col-4-fr">
+            <a href="Shop.html#shirts" onclick="rmvBuyDiv()" class="btn d-flex gap-10 fs-20 normal-link c-orange bg-black w-full p-10">Buy Another Shirt <i class="fa-solid fa-cart-shopping c-orange"></i></a>
+            <a href="Shop.html#pants" onclick="rmvBuyDiv()" class="btn d-flex gap-10 fs-20 normal-link c-orange bg-black w-full p-10">Buy Another Pants <i class="fa-solid fa-cart-shopping c-orange"></i></a>
+            <a href="Shop.html#jackets" onclick="rmvBuyDiv()" class="btn d-flex gap-10 fs-20 normal-link c-orange bg-black w-full p-10">Buy Another Jackets<i class="fa-solid fa-cart-shopping c-orange"></i></a>
+            <a href="Shop.html#shoes" onclick="rmvBuyDiv()" class="btn d-flex gap-10 fs-20 normal-link c-orange bg-black w-full p-10">Buy Another Shoes<i class="fa-solid fa-cart-shopping c-orange"></i></a>
+        </div>
+    </div>
+    <nav class="d-flex align-center p-20 bg-black c-white">
+        <h1 class="logo">My Store</h1>
+        <div class="container d-flex align-center justify-space-between">
+            <div class="search-div">
+                <form action="" class="d-flex align-center direction-row-reverse gap-10 bg-white c-grey pr-10">
+                    <input type="search" name="" id="search-input" class="normal-input" placeholder="Search In Products">
+                </form>
+                <div class="d-flex direction-column text-center" id="suggestions-div"></div>
+            </div>
+
+            <div class="links">
+                <i class="fas fa-bars toggle-menu visible-xs"></i>
+                <ul class="non-styled-list d-grid grid-col-5-fr text-center gap-30 align-center"> 
+                    <li class="position-relative"><a class="normal-link c-white" href="../Home/index.html">HOME</a></li>
+                    <li class="position-relative"><a class="normal-link c-white active" href="">SHOP</a></li>
+                    <li class="position-relative"><a class="normal-link c-white" href="../Contact Us/contactUs.html">CONTACT US</a></li>
+                    <li class="position-relative"><a class="normal-link c-white" href="../About Us/aboutUs.html">ABOUT US</a></li>
+                </ul>    
+            </div>
+        </div>
+    </nav>
+    <div class="cart bg-black p-10 w-fit position-fixed pointer" onclick="addBuyDiv()">
+        <p class="c-orange normal-link">Buy</p>
+        <i id="cart" class="fa-solid fa-cart-shopping c-orange"><p></p></i>
+    </div>
+    <div class="heading p-20 text-center">
+        <h1>Our Online Shop</h1>
+    </div>
+    <h2 id="shirts" class="w-fit p-10 title">Shirts</h2>
+    <div class="section d-grid grid-col-250 gap-30 p-20">
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-1.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number one</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div aria-valuenow="20" id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-2.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number two</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-3.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number three</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-4.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number four</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-5.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number five</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-6.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number six</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-7.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number seven</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-8.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number eight</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-9.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number nine</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shirt-10.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The T-shirt number ten</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+    </div>
+    <h2 id="pants" class="w-fit p-10 title">Pants</h2>
+    <div class="section d-grid grid-col-250 gap-30 p-20">
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-1.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number one</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-2.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number two</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-3.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number three</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-4.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number four</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-5.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number five</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-6.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number six</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-7.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number seven</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-8.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number eight</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-9.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number nine</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Pants-10.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Pants number ten</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+    </div>
+    <h2 id="jackets" class="w-fit p-10 title">Jackets</h2>
+    <div class="section d-grid grid-col-250 gap-30 p-20">
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-1.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number one</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-2.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number two</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-3.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number three</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-4.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number four</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-5.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number five</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-6.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number six</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-7.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number seven</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-8.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number eight</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-9.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number nine</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Jacket-10.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Jacket number ten</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+    </div>
+    <h2 id="shoes" class="w-fit p-10 title">Shoes</h2>
+    <div class="section d-grid grid-col-250 gap-30 p-20">
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-1.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number one</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-2.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number two</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-3.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number three</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-4.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number four</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-5.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number five</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-6.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number six</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-7.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number seven</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-8.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number eight</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-9.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number nine</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+        <div class="card p-10 text-center d-flex direction-column gap-10 justify-space-between">
+            <div class="image">
+                <img class="res-image flex-1" src="../images/Shoes-10.webp" alt="">
+            </div>
+            <div class="paragraph">
+                <p class="fs-20">The Shoes number ten</p>
+                <p class="fs-17 c-orange fw-bold">20$</p>
+                <div id="addToCart" onclick="add(this)" class="pointer pt-5 pb-5 fs-20 d-flex gap-5 justify-center align-center"><p>Add To Cart</p><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-black c-white p-20">
+        <p class="text-center">&copy;2023 <a href="" class="normal-link c-orange fw-bold">-FMIP-</a> All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
